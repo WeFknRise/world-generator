@@ -1,0 +1,102 @@
+body {
+    border: 0;
+    height: 100%;
+    margin: 0;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+#initial {
+    fill: none;
+    stroke: black;
+    pointer-events: none;
+}
+
+#loading {
+    opacity: 1;
+    font-size: 11px;
+    color: #fff5da;
+    text-align: center;
+    text-shadow: 0 1px 4px #4c3a35;
+    width: 80%;
+    max-width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#title_name {
+    text-align: left;
+    font-size: 3em;
+    margin-left: 5%;
+}
+
+#title {
+    font-size: 7em;
+    margin: -12px 0 -6px 0;
+}
+
+#loading-text {
+    font-size: 1.8em;
+    margin: 0.2em 0 0 1em;
+}
+
+#loading-text > span {
+    font-size: 1.3em;
+    padding-left: 1px;
+    line-height: 0;
+}
+
+#loading-text > span, #uploading-map span {
+    animation: 3s infinite both blink;
+}
+
+#loading-text span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#loading-text span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+#map {
+    background-color: #000000;
+    mask-mode: alpha;
+    mask-clip: no-clip;
+    fill-rule: evenodd;
+    position: absolute;
+}
+
+#cells {
+    fill: none;
+}
+
+#ocean {
+    fill-rule: evenodd;
+}
+
+#coastline {
+    fill: none;
+    stroke-linejoin: round;
+}
+
+#rivers {
+    stroke: none;
+    mask: url(#land);
+}
+
+#temperature {
+    font-family: sans-serif;
+    font-weight: 700;
+    text-anchor: middle;
+    dominant-baseline: central;
+    text-shadow: 0 0 10px white;
+    fill-rule: evenodd;
+}
+
+#landmass {
+    mask: url(#land);
+    fill-rule: evenodd;
+}
